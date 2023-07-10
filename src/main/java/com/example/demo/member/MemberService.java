@@ -25,7 +25,9 @@ public class MemberService {
         return memberRepository.save(member);
     }
     //r
-    public Member findMember(long memberId) {return findVerifiedMember(memberId);}
+    public Member findMember(long memberId) {
+        return findVerifiedMember(memberId);
+    }
 
     public Page<Member> findMembers(int page, int size){
         return memberRepository.findAll(PageRequest.of(page, size,
