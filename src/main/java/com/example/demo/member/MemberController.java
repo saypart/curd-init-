@@ -3,12 +3,15 @@ package com.example.demo.member;
 import com.example.demo.member.dto.MemberPatchDto;
 import com.example.demo.member.dto.MemberPostDto;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.dto.*;
@@ -83,4 +86,11 @@ public class MemberController {
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+
+//    @GetMapping("/mail")
+//    public String getMail(@Email @RequestParam String email) {
+//        Member member = memberService.verifyExistsEmail(email);
+//        return "이미 가입된 이메일 입니다.";
+//    }
 }
