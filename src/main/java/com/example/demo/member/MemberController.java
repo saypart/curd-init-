@@ -18,7 +18,7 @@ import com.example.demo.dto.*;
 
 import java.util.List;
 
-@AllArgsConstructor // 필드에 쓴 모든생성자 생성
+@AllArgsConstructor // 필드에 쓴 모든생성자 생성 변경확인
 @RestController
 @RequestMapping("/v1/member")
 public class MemberController {
